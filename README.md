@@ -105,14 +105,10 @@ pip install carla
 
 ## LAD-Drive Weights
 
-# TODO 
-
 | Version | Size |  Checkpoint | VisionEncoder | LLM-base | 
 |---------|------|------------|----------------|-----------|
 | LAD-Drive | 7B | [LAD-Drive](https://huggingface.co/iis-esslingen/LAD-Drive) | [R50](https://huggingface.co/OpenDILabCommunity/LMDrive-vision-encoder-r50-v1.0) | [LLaVA-v1.5-7B](https://huggingface.co/liuhaotian/llava-v1.5-7b) 
 | LMDrive-1.0 (LLaVA-v1.5-7B) | 7B |  [LMDrive-llava-v1.5-7b-v1.0](https://huggingface.co/OpenDILabCommunity/LMDrive-llava-v1.5-7b-v1.0) | [R50](https://huggingface.co/OpenDILabCommunity/LMDrive-vision-encoder-r50-v1.0) | [LLaVA-v1.5-7B](https://huggingface.co/liuhaotian/llava-v1.5-7b) 
-
-*DS denotes the driving score*
 
 Download pretrained models
 ```Shell
