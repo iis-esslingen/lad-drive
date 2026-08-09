@@ -198,7 +198,6 @@ Run the final evaluation for all benchmarks:
 This implementation is inspired on code from several repositories:
 - [LMDrive](https://github.com/opendilab/LMDrive)
 - [DiffusionDrive](https://github.com/hustvl/diffusiondrive)
-- [ORION](https://github.com/xiaomi-mlab/Orion)
 
 ## License
 All code within this repository is under [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0).
