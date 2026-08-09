@@ -5,6 +5,7 @@
 ## IROS 2026
 
 [![arXiv](https://img.shields.io/badge/arXiv-2603.02035-b31b1b.svg?style=for-the-badge)](https://arxiv.org/abs/2603.02035)
+[![Hugging Face](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-LAD--Drive-FFD21E.svg?style=for-the-badge)](https://huggingface.co/iis-esslingen/LAD-Drive)
 
 [**Fabian Schmidt**](https://rl.uni-freiburg.de/people/schmidt)<sup>1,2</sup> · [**Karol Fedurko**](https://scholar.google.com/citations?user=FIpyuF8AAAAJ)<sup>1</sup> · [**Markus Enzweiler**](https://markus-enzweiler.de/)<sup>1</sup> · [**Abhinav Valada**](https://rl.uni-freiburg.de/people/valada)<sup>2</sup>
 
