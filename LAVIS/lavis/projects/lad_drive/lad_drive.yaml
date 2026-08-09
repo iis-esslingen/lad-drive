@@ -1,0 +1,99 @@
+model:
+  arch: lad_drive
+  model_type: vicuna7b
+  preception_model: memfuser_baseline_e1d3_return_feature
+  preception_model_ckpt: /beegfs/scratch/workspace/es_kafeit00-lang-traj/research-project/LADDrive/LAVIS/LMDrive-vision-encoder-r50-v1.0/vision-encoder-r50.pth.tar # TODO adjust path
+  load_pretrained_preception_model: true
+  llm_model: /beegfs/scratch/workspace/es_kafeit00-lang-traj/research-project/LADDrive/LAVIS/llava-v1.5-7b # TODO adjust path
+  llm_pretrained_ckpt: /beegfs/scratch/workspace/es_kafeit00-lang-traj/research-project/LADDrive/LAVIS/LMDrive-llava-v1.5-7b-v1.0/llava-v1.5-checkpoint.pth # TODO adjust path
+  load_pretrained_llm_model: true
+  freeze_vit: true
+  max_txt_len: 64
+  split_section_num_for_visual_encoder: 2
+  plan_anchor_path: /beegfs/scratch/workspace/es_kafeit00-lang-traj/research-project/LADDrive/anchors/kmeans_anchors_lmdrive_20_modes_5_poses.npy # TODO adjust path
+datasets:
+  carla_voice:
+    build_info:
+      annotations:
+        train:
+          storage: /localscratch/tmpdir.34655/dataset
+          towns:
+          - 1
+          - 2
+          - 3
+          - 4
+          - 5
+          - 6
+          - 7
+          - 10
+          weathers:
+          - 0
+          - 1
+          - 2
+          - 3
+          - 4
+          - 5
+          - 6
+          - 7
+          - 8
+          - 9
+          - 10
+          - 11
+          - 14
+          - 15
+          - 16
+          - 17
+          - 18
+          - 19
+          scale:
+          - 0.95
+          - 1.05
+          enable_start_frame_augment: true
+          token_max_length: 40
+          enable_notice: true
+        val:
+          storage: /localscratch/tmpdir.34655/dataset
+          towns:
+          - 1
+          - 2
+          - 3
+          - 4
+          - 5
+          - 6
+          - 7
+          - 10
+          weathers:
+          - 12
+          - 13
+          - 20
+          scale:
+          - 0.95
+          - 1.05
+          enable_start_frame_augment: true
+          token_max_length: 40
+          enable_notice: true
+run:
+  task: carla_drive
+  lr_sched: linear_warmup_cosine_lr
+  init_lr: 2e-5
+  min_lr: 1e-6
+  warmup_lr: 5e-7
+  weight_decay: 0.1
+  max_epoch: 10
+  batch_size_train: 2
+  batch_size_eval: 2
+  num_workers: 24
+  warmup_steps: 2000
+  seed: 42
+  output_dir: output/lad_drive
+  amp: true
+  resume_ckpt_path: null
+  evaluate: false
+  train_splits:
+  - train
+  valid_splits:
+  - val
+  device: cuda
+  world_size: 8
+  dist_url: env://
+  distributed: true
