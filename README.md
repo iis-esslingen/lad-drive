@@ -119,7 +119,7 @@ git clone https://huggingface.co/OpenDILabCommunity/LMDrive-llava-v1.5-7b-v1.0
 git clone https://huggingface.co/OpenDILabCommunity/LMDrive-vision-encoder-r50-v1.0
 ```
 
-##### Data Collection
+## Data Collection
 
 For details on data collection, see the [LMDrive dataset section](https://github.com/opendilab/LMDrive#dataset).
 
