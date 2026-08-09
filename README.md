@@ -38,7 +38,7 @@ If you find our work useful in your research, please consider citing:
 
 ## Table of Contents
 1. [Setup](#setup)
-2. [Model Weights](#lmdrive-weights)
+2. [Model Weights](#lad-drive-weights)
 3. [Data Collection](#data-collection)
 4. [Training](#training)
    1. [Vision encoder pre-training](#vision-encoder-pre-training)
